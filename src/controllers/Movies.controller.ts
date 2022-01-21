@@ -3,11 +3,11 @@ import { getConnection, getRepository, In } from "typeorm";
 import {Comment} from "../entities/Comment";
 import axios from "axios";
 import {swapi} from "../shared/constants"
-import { Utility } from "src/utility/utility";
+import { Utility } from "../utility/utility";
 import { BAD_REQUEST, OK } from "http-status-codes";
 import {IResult} from "../interfaces/Movies.interface";
 import { dateToNumber, genderFilter, genderSort, heightCalculator, heightSort, nameSort, toFeet } from "../shared/functions";
-import { ICharacter, ICharacterResult } from "src/interfaces/Character.interface";
+import { ICharacter, ICharacterResult } from "../interfaces/Character.interface";
 const convert = require('convert-length');
 
 /**

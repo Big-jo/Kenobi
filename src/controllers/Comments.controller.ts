@@ -2,9 +2,8 @@ import { getRepository, Repository } from "typeorm";
 import { IComment } from "../interfaces/Comment.interface";
 import { Comment as CommentEntity } from "../entities/Comment";
 import { Request, Response } from "express";
-import logger from "src/shared/Logger";
 import { BAD_REQUEST, CREATED, INTERNAL_SERVER_ERROR, OK } from "http-status-codes";
-import { Utility } from "src/utility/utility";
+import { Utility } from "../utility/utility";
 
 export class CommentController {
     constructor() { }
