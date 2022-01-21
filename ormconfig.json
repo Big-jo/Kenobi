@@ -1,6 +1,12 @@
 {
   "synchronize": true,
   "logging": false,
+  "type":"postgres",
+  "host": "ec2-3-225-41-234.compute-1.amazonaws.com",
+  "username": "dinuvhwtstxdhv",
+  "database": "d9c1t8o7j1dqsk",
+  "port": 5432,
+  "password": "b74935c22bdaca639eee5b7337561b458adf08809cc643992135f85e6d7fac99",  
   "entities": [
      "src/entities/**/*.ts"
   ],
@@ -14,5 +20,5 @@
      "entitiesDir": "src/entity",
      "migrationsDir": "src/migration",
      "subscribersDir": "src/subscriber"
-  }
+  },
 }

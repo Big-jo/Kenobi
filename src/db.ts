@@ -6,7 +6,12 @@ import { Comment } from "./entities/Comment";
 
 export async function intializeDB(): Promise<void> {
   try {
-    await createConnection()
+    // Credentials should be in environment variables, due to a bug, as a quick workaround, this is here.
+    // DO NOT TRY THIS IN PROD
+    await createConnection({
+      url: "postgres://wzamuzgh:2msU2PDnm8Un0NZYk0Ek9JaeHjPfzaxg@rosie.db.elephantsql.com/wzamuzgh",
+      type: "postgres"
+  });
     logger.info('Database successfully initialized');
 
   } catch (error) {
