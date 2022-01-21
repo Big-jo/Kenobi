@@ -1,7 +1,7 @@
 import "reflect-metadata";
 import { createConnection } from "typeorm";
 import { Tedis } from "tedis";
-import logger from '../src/shared/Logger';
+import logger from './shared/Logger';
 import { Comment } from "./entities/Comment";
 
 export async function intializeDB(): Promise<void> {
