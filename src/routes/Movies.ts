@@ -1,6 +1,6 @@
 import { Request, Response, Router } from 'express';
-import { CommentController } from 'src/controllers/Comments.controller';
-import { MoviesController } from 'src/controllers/Movies.controller';
+import { CommentController } from '../controllers/Comments.controller';
+import { MoviesController } from '../controllers/Movies.controller';
 
 // Init shared
 const router = Router();
