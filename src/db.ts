@@ -20,6 +20,5 @@ export async function intializeDB(): Promise<void> {
 //     host: "127.0.0.1"
 //   });
 
-  logger.info('Redis cache successfully initialized');
-  return tedis;
-}
+  // logger.info('Redis cache successfully initialized');
+  // return tedis;

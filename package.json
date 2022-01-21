@@ -24,7 +24,7 @@
     "tedis": "^0.1.12",
     "ts-node-dev": "^1.1.8",
     "typeorm": "^0.2.25",
-    "typescript": "^3.9.5",
+    "typescript": "^3.9.10",
     "winston": "^3.2.1"
   },
   "devDependencies": {

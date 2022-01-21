@@ -2,19 +2,14 @@ const fs = require('fs-extra');
 const childProcess = require('child_process');
 
 
-try {
-    // Remove current build
-    fs.removeSync('./dist/');
-    // Copy front-end files
-    // Transpile the typescript files
-    const proc = childProcess.exec('tsc --build tsconfig.prod.json');
+// remove current build, and create new one
+fs.removeSync('./dist/');
 
-    proc.on('close', (code) => {
-        if (code !== 0) {
-            throw Error("Build failed")
-        }
-    });
 
-} catch (err) {
-    console.log(err);
-}
+// transpile the typescript files
+childProcess.exec('tsc --build tsconfig.prod.json', (error, stdout, stderr) => {
+    if(error) console.error(error.message);
+    console.error(stderr);
+    console.log(stdout);
+});
+
