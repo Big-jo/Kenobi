@@ -1,4 +1,4 @@
-// import './LoadEnv'; // Must be the first import
+import './LoadEnv'; // Must be the first import
 import app from './Server';
 import logger from './shared/Logger';
 import { intializeDB } from './db';
@@ -6,7 +6,7 @@ import { intializeDB } from './db';
 
 intializeDB();
 
-const redisPORT = Number(process.env.REDIS_PORT || 6379)
+// const redisPORT = Number(process.env.REDIS_PORT || 6379)
 // initializeCache(redisPORT);
 
 // Start the server
