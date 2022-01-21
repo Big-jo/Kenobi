@@ -10,7 +10,8 @@ export async function intializeDB(): Promise<void> {
     // DO NOT TRY THIS IN PROD
     await createConnection({
       url: "postgres://wzamuzgh:2msU2PDnm8Un0NZYk0Ek9JaeHjPfzaxg@rosie.db.elephantsql.com/wzamuzgh",
-      type: "postgres"
+      type: "postgres",
+      entities: ["src/**/entities/**/*.js"]
   });
     logger.info('Database successfully initialized');
 
