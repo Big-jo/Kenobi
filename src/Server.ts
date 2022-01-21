@@ -14,7 +14,6 @@ import logger from './shared/Logger';
 const app = express();
 
 
-
 /************************************************************************************
  *                              Set basic express settings
  ***********************************************************************************/
@@ -33,31 +32,23 @@ if (process.env.NODE_ENV === 'production') {
     app.use(helmet());
 }
 
-// Add APIs
 app.use('/api', BaseRouter);
 
-// Print API errors
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
-    logger.error(err.message, err);
-    return res.status(BAD_REQUEST).json({
-        error: err.message,
-    });
+// Optional fallthrough error handler
+app.use(function onError(err: any, req: any, res: any, next: any) {
+    logger.error(err.message);
+    res.statusCode = 500;
 });
-
 
 
 /************************************************************************************
- *                              Serve front-end content
+ *                              Default
  ***********************************************************************************/
-
-const viewsDir = path.join(__dirname, 'views');
-app.set('views', viewsDir);
-const staticDir = path.join(__dirname, 'public');
-app.use(express.static(staticDir));
-app.get('*', (req: Request, res: Response) => {
-    res.sendFile('index.html', {root: viewsDir});
+app.all('*', (req: Request, res: Response) => {
+    res.send('Welcome To Kenobi, Your one Star Wars Portal');
 });
+
+
 
 // Export express instance
 export default app;

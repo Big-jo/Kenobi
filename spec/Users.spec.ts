@@ -1,6 +1,6 @@
 import supertest from 'supertest';
 import { getConnection } from 'typeorm';
-import { User } from "../src/entities/User";
+import { User } from "../src/entities/Comment";
 import { intializeDB } from "../src/db";
 
 import { OK } from 'http-status-codes';

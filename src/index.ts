@@ -1,4 +1,4 @@
-import './LoadEnv'; // Must be the first import
+// import './LoadEnv'; // Must be the first import
 import app from './Server';
 import logger from './shared/Logger';
 import { intializeDB } from './db';
