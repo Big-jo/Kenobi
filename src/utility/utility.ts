@@ -1,6 +1,6 @@
 import {Response} from 'express';
 import { BAD_REQUEST, CREATED, OK, INTERNAL_SERVER_ERROR } from 'http-status-codes';
-import logger from 'src/shared/Logger';
+import logger from '../shared/Logger';
 
 export class Utility {
 
