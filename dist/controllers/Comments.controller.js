@@ -5,7 +5,7 @@ const tslib_1 = require("tslib");
 const typeorm_1 = require("typeorm");
 const Comment_1 = require("../entities/Comment");
 const http_status_codes_1 = require("http-status-codes");
-const utility_1 = require("src/utility/utility");
+const utility_1 = require("../utility/utility");
 class CommentController {
     constructor() { }
     CreateComment(req, res) {
