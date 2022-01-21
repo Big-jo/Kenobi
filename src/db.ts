@@ -11,8 +11,11 @@ export async function intializeDB(): Promise<void> {
     await createConnection({
       url: "postgres://wzamuzgh:2msU2PDnm8Un0NZYk0Ek9JaeHjPfzaxg@rosie.db.elephantsql.com/wzamuzgh",
       type: "postgres",
-      entities: ["src/**/entities/**/*.js"]
+      entities: ["src/**/entities/**/*.js"],
+      name: "default",
+      synchronize: true,
   });
+  
     logger.info('Database successfully initialized');
 
   } catch (error) {
