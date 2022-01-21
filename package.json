@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@types/redis": "^2.8.22",
+    "axios": "^0.25.0",
     "command-line-args": "^5.1.1",
     "convert-length": "^1.0.1",
     "cookie-parser": "^1.4.5",
