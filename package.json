@@ -5,7 +5,7 @@
     "build": "node build",
     "lint": "eslint . --ext .ts",
     "start": "node ./dist/index.js --env=production",
-    "start:dev": "ts-node -r tsconfig-paths/register ./src",
+    "start:dev": "nodemon --config nodemon.json",
     "test": "ts-node -r tsconfig-paths/register ./spec"
   },
   "dependencies": {
