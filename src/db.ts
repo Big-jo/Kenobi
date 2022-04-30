@@ -8,7 +8,7 @@ export async function intializeDB(): Promise<void> {
     // Credentials should be in environment variables, due to a bug, as a quick workaround, this is here.
     // DO NOT TRY THIS IN PROD
     await createConnection({
-      // url: "postgres://wzamuzgh:2msU2PDnm8Un0NZYk0Ek9JaeHjPfzaxg@rosie.db.elephantsql.com/wzamuzgh",
+      url: "postgres://wzamuzgh:2msU2PDnm8Un0NZYk0Ek9JaeHjPfzaxg@rosie.db.elephantsql.com/wzamuzgh",
       type: "postgres",
       entities: ["**/entities/{*.js,*.ts}"],
       name: "default",
